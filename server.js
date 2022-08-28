@@ -5,6 +5,6 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 
-sequelize.sync({ force: false }).then( () => {
+sequelize.sync({ force: true }).then( () => {
   app.listen(PORT, () => console.log(`Now listening at ${PORT}...`));
 });
